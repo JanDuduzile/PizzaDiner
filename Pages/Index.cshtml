@@ -1,0 +1,14 @@
+﻿@page
+@model PizzaDiner.Pages.IndexModel
+
+@{
+    ViewData["Title"] = "The Home for Pizza Lovers";
+    TimeSpan timeInBusiness = DateTime.Now - new DateTime(2018, 3, 1);
+}
+
+<h1>Welcome to Pizza Diner</h1>
+<p class="lead">The best pizza diner on this side of the world! <br/> For @Convert.ToInt32(timeInBusiness.TotalDays) days!</p>
+<!--Add animation or images here-->
+<p>
+    <a asp-page="PizzaList">View Pizza List</a>
+</p>
